@@ -95,3 +95,22 @@ public class DBSingleton {
     }
 }
 ```
+
+## Pitfalls
+
+- Often overused.
+- Difficult to unit test.
+- If not careful, not thread safe.
+- Sometimes confused for `Factory`.
+- A rule of thumb is that if it needs a parameter, it is not a singleton anymore,
+but rather it would be a factory.
+java.util.Calendar is NOT a singleton.
+    - Prototype (because you are getting a new instance everytime you call the `getInstance()`)
+
+## Contrast
+
+Singleton | Factory
+:---:|:---:
+Returns the same instance. (One constructor method - no args)| Returns various instances. (Multiple constructors)
+No Interface | Interface driven
+... | Adaptable to the environment more easily.
