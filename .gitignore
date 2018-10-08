@@ -1,3 +1,6 @@
 design-patterns.iml
 /.idea
 /target
+/.gradle/
+/.idea/
+/build/
